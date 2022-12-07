@@ -7,6 +7,9 @@ import { AdminComponent } from './admin/admin.component';
 import { RouterModule, Routes } from '@angular/router';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { UserRegisterComponent } from './user-register/user-register.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { ProductViewTableComponent } from './product-view-table/product-view-table.component';
+import { SearchAdminComponent } from './search-admin/search-admin.component';
 const myroute:Routes=[
   {
     path:''
@@ -18,6 +21,17 @@ const myroute:Routes=[
   {
     path:'reg',
     component:UserRegisterComponent
+  },{
+    path:'add',
+    component:AddProductComponent
+  },
+  {
+    path:'viewt',
+    component:ProductViewTableComponent
+  },
+  {
+    path:'admsearch',
+    component:SearchAdminComponent
   }
 ]
 @NgModule({
@@ -25,7 +39,10 @@ const myroute:Routes=[
     AppComponent,
     AdminComponent,
     UserLoginComponent,
-    UserRegisterComponent
+    UserRegisterComponent,
+    AddProductComponent,
+    ProductViewTableComponent,
+    SearchAdminComponent
   ],
   imports: [
     BrowserModule,
