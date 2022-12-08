@@ -13,19 +13,19 @@
               </div>
               <div class="col col-12 col-sm-12 col-md-12 col-xl-12 col-xxl-12 col-lg-12">
                 <label for="" class="form-label text-light">User Name</label>
-                <input type="text" class="form-control">
+                <input type="text" name="name" [(ngModel)]="name" class="form-control">
               </div>
               <div class="col col-12 col-sm-12 col-md-12 col-xl-12 col-xxl-12 col-lg-12">
                 
                   <label for="" class="form-label text-light">Password</label>
-                  <input type="password" class="form-control">
+                  <input type="password" name="pswrd" [(ngModel)]="pswrd" class="form-control">
                 
               </div>
               <div class="col col-12 col-sm-12 col-md-12 col-xl-12 col-xxl-12 col-lg-12 mt-4 text-center ">
-                <button class="btn btn-success ">Login</button>
+                <button class="btn btn-success " (click)="read()">Login</button>
               </div>
               <div class="col col-12 col-sm-12 col-md-12 col-xl-12 col-xxl-12 col-lg-12 mt-4 text-center ">
-                <a href="" class="text-light">User Login</a>
+                <a routerLink="/user" class="text-light">User Login</a>
               </div>
 
           </div>

@@ -11,6 +11,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { ProductViewTableComponent } from './product-view-table/product-view-table.component';
 import { SearchAdminComponent } from './search-admin/search-admin.component';
 import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
+import { FormsModule } from '@angular/forms';
 const myroute:Routes=[
   {
     path:''
@@ -49,7 +50,8 @@ const myroute:Routes=[
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(myroute)
+    RouterModule.forRoot(myroute),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
