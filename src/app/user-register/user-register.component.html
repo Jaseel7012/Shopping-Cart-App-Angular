@@ -8,26 +8,26 @@
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Name</label>
-                    <input type="text" class="form-control">
+                    <input type="text" name="name" [(ngModel)]="name" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Phone Number</label>
-                    <input type="text" class="form-control">
+                    <input type="text" name="pno" [(ngModel)]="pno" class="form-control">
 
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Email Id</label>
-                    <input type="text" class="form-control">
+                    <input type="text" name="email" [(ngModel)]="email" class="form-control">
 
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Password</label>
-                    <input type="password" class="form-control">
+                    <input type="password" name="password" [(ngModel)]="password" class="form-control">
 
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Confirm Password</label>
-                    <input type="password" class="form-control">
+                    <input type="password" name="cnfrm" [(ngModel)]="cnfrm" class="form-control">
 
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -35,7 +35,7 @@
                     <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center p-3">
-                    <button class="btn btn-primary">Register</button>
+                    <button class="btn btn-primary" (click)="read()">Register</button>
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center p-3">
                     <a routerLink="/user" class="text-center text-success">Login here</a>

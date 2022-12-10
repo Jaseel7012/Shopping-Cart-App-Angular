@@ -12,6 +12,8 @@ import { ProductViewTableComponent } from './product-view-table/product-view-tab
 import { SearchAdminComponent } from './search-admin/search-admin.component';
 import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
 import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import { UserProfileComponent } from './user-profile/user-profile.component'
 const myroute:Routes=[
   {
     path:''
@@ -45,13 +47,15 @@ const myroute:Routes=[
     AddProductComponent,
     ProductViewTableComponent,
     SearchAdminComponent,
-    NavbarAdminComponent
+    NavbarAdminComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(myroute),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
