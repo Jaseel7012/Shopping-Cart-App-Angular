@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <label for="" class="form-label">Product</label>
+                    <input type="text" name="name" [(ngModel)]="name" class="form-control">
+
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <button class="btn btn-success mt-2 float-end" (click)="read()" >Search</button>
+                </div>
+                <div class="row">
+                    <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4" *ngFor="let i of searchdata">
+                        <div class="card" >
+                            <img height="200px" class="card-img-top" src="{{i.image}}" >
+                            <div class="card-body">
+                              <h5 class="card-title">{{i.name}}</h5>
+                              <p class="card-text">{{i.price}}</p>
+                              <a href="#" class="btn btn-primary">Buy Now</a>
+                            </div>
+                          </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row g-2 ">
+                <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3" *ngFor="let i of data">
+                    <div class="card" >
+                        <img height="200px" class="card-img-top" src="{{i.image}}" >
+                        <div class="card-body">
+                          <h5 class="card-title">{{i.name}}</h5>
+                          <p class="card-text">{{i.price}}</p>
+                          <a href="#" class="btn btn-primary">Buy Now</a>
+                        </div>
+                      </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

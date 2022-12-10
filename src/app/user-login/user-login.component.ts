@@ -11,25 +11,35 @@ export class UserLoginComponent {
 
 email=""
 password=""
-
+s:any=[]
 constructor(private api:ApiShoppingCartService,private r:Router){}
+
 read=()=>{
   let data={
     "email":this.email,
     "password":this.password
   }
   console.log(data)
-  this.api.usercheck("http://localhost:8080/login").subscribe(
+  this.api.usercheck(data).subscribe(
     (resp:any)=>{
+      console.log(resp.status)
       if(resp.status=="success"){
-        this.r.navigate(['/user'])
+        let uid=resp.userId;
+        console.log(uid);
+        localStorage.setItem("userInfo",uid)
+
+
+
+        this.r.navigate(['/userpro'])
       }
       else{
         alert(resp.message)
       }
-
-    }
+      }
   )
+      
+
+   
 }
 
 

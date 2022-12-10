@@ -20,4 +20,10 @@ export class ApiShoppingCartService {
   usercheck=(data:any)=>{
     return this.http.post("http://localhost:8080/log",data)
   }
+  productsearch=(data:any)=>{
+    return this.http.post("http://localhost:8080/search",data)
+  }
+  getuserinfo=(data:any)=>{
+    return this.http.post("http://localhost:8080/userid",data)
+  }
 }

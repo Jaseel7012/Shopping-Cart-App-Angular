@@ -13,7 +13,9 @@ import { SearchAdminComponent } from './search-admin/search-admin.component';
 import { NavbarAdminComponent } from './navbar-admin/navbar-admin.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-import { UserProfileComponent } from './user-profile/user-profile.component'
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { ProductViewCardComponent } from './product-view-card/product-view-card.component';
+import { NavbarComponent } from './navbar/navbar.component'
 const myroute:Routes=[
   {
     path:''
@@ -36,6 +38,12 @@ const myroute:Routes=[
   {
     path:'admsearch',
     component:SearchAdminComponent
+  },{
+    path:'viewc',
+    component:ProductViewCardComponent
+  },{
+    path:'userpro',
+    component:UserProfileComponent
   }
 ]
 @NgModule({
@@ -48,7 +56,9 @@ const myroute:Routes=[
     ProductViewTableComponent,
     SearchAdminComponent,
     NavbarAdminComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    ProductViewCardComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

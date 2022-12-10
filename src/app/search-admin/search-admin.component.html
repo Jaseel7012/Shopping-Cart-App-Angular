@@ -5,11 +5,23 @@
             <div class="row">
                 <div class="col col-12 col-xl-12 col-sm-12 col-md-12 col-xxl-12 col-lg-12  mt-5">
                     <label for="" class="form label">Product</label>
-                    <input type="text" class="form-control">
+                    <input type="text" name="name" [(ngModel)]="name"  class="form-control">
 
                 </div>
                 <div class="col col-12 col-xl-12 col-sm-12 col-md-12 col-xxl-12 col-lg-12 mt-2 text-center">
-                    <button class="btn btn-success">Search</button>
+                    <button class="btn btn-success" (click)="read()">Search</button>
+                </div>
+                <div class="row mt-3">
+                    <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4" *ngFor="let i of search">
+                        <div class="card" >
+                            <img height="200px" class="card-img-top" src="{{i.image}}" >
+                            <div class="card-body">
+                              <h5 class="card-title">{{i.name}}</h5>
+                              <p class="card-text">{{i.price}}</p>
+                              
+                            </div>
+                          </div>
+                    </div>
                 </div>
             </div>
         </div>
